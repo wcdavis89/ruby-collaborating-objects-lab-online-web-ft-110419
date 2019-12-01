@@ -11,6 +11,8 @@ class Artist
   def add_song(song)
     self.songs << song
   end
+  def save
+    @@artists << self
   
   def add_song_by_name(name, genre)
     song=Song.new(name, genre)
