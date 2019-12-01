@@ -16,8 +16,12 @@ class Artist
     add_song(song)
   end
   
-    def self.find_or_create_by_name(name)
-      @@artists.find{|person| person.name == name}
+  def self.find_or_create_by_name(name)
+    if @@artists.find{|person| person.name == name}
+      return name
+    else
+        add_song(song)
+    end
   end
   
   def songs
