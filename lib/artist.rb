@@ -23,6 +23,8 @@ class Artist
     else
         add_song(song)
     end
+    
+    
   end
   
   def songs
