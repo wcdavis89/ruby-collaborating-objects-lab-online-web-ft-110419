@@ -12,11 +12,11 @@ class Artist
   end
 
   def save
-    @@all << self
+    @@artists << self
   end
 
   def all     
-    @@all
+    @@artists
   end
 
   def self.find_or_create_by_name(name)
