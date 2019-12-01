@@ -9,11 +9,13 @@ class Artist
   
   def add_song(song)
     song.artist=self
+    @@artists << self.name
   end
   
   def add_song_by_name(name, genre)
     song=Song.new(name, genre)
     add_song(song)
+    @@artists << self.name
   end
   
   def self.find_or_create_by_name(name)
